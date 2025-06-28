@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramu's Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2285%22>🧑🏻‍💻</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/ramulombardi" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://twitter.com/ramulombardi" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/@ramulombardi" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/ramulombardii" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@ramulombardi" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
+  </div>
+
+  <div class="container">
+
+    <header>
+      <div class="intro">
+        <img src="https://github.com/ramulombardi.png" alt="Ramu Lombardi" class="profile-pic">
+      </div>
+      <p class="tagline">
+        <h2>Hola! Soy Ramu🧑🏻‍💻</h2>
+        <h3>Finanzas | Programación | Data Analysis<br>Estudiante Contador Público y Lic. en Economía</h3>
+      </p>
+      <a href="https://drive.google.com/file/d/1UIA21gFGpEtrz8DTsPjwXOoOrpxlIl5W/view?usp=sharing" target="_blank" class="btn btn-primary">
+        <i class="fas fa-file-alt" style="margin-right: 8px;"></i> Ver CV
+      </a>
+    </header>
+
+    <section id="projects">
+      <h2 class="section-title">Proyectos</h2>
+
+      <div class="card centered">
+        <h3>Dashboards en Power BI y Looker Studio</h3>
+        <p>Variedad de Dashboards visualmente claros para el análisis de resultados comerciales.</p>
+        <div class="tech-stack">
+          <span class="tech-item">Power BI</span>
+          <span class="tech-item">Excel</span>
+          <span class="tech-item">Data Visualization</span>
+        </div>
+        <a href="https://www.ramulombardi.com/dashboards/" target="_blank" class="project-link">Ver dashboards</a>
+      </div>
+
+      <div class="card centered">
+        <h3>Index Fund Simulator</h3>
+        <p>Aplicación web integrada con Yahoo Finance API para simular el impacto del interés compuesto cuando invertimos en fondos indexados.</p>
+        <div class="tech-stack">
+          <span class="tech-item">Python</span>
+          <span class="tech-item">Streamlit</span>
+          <span class="tech-item">Yahoo Finance API</span>
+        </div>
+        <a href="https://indexfundsimulator.streamlit.app/" target="_blank" class="project-link">Ver proyecto</a>
+      </div>
+
+      <div class="card centered">
+        <h3>Dolar API Integration</h3>
+        <p>Aplicación web integrada con Dolar API para calcular los montos de compra y venta de dolares en Argentina.</p>
+        <div class="tech-stack">
+          <span class="tech-item">Python</span>
+          <span class="tech-item">Streamlit</span>
+          <span class="tech-item">Dolar API</span>
+        </div>
+        <a href="https://dolarcalculator.streamlit.app/" target="_blank" class="project-link">Ver proyecto</a>
+      </div>
+    </section>
+
+    <section id="certificaciones">
+      <h2 class="section-title">Certificaciones</h2>
+      <div class="cert-carousel">
+        <div class="cert-track">
+          <img src="img/cert1.jpg" alt="Certificado 1" class="cert-thumb">
+          <img src="img/cert2.jpg" alt="Certificado 2" class="cert-thumb">
+          <img src="img/cert3.jpg" alt="Certificado 3" class="cert-thumb">
+          <img src="img/cert4.jpg" alt="Certificado 4" class="cert-thumb">
+        </div>
+      </div>
+
+      <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <div class="contact-info">
+          <div class="contact-item centered-button">
+            <a href="https://wa.me/5491155848680?text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web" target="_blank" rel="noopener" class="whatsapp-button">
+              <i class="fab fa-whatsapp"></i> Contactame!
+            </a>
+          </div>
+          <div class="contact-item"><i class="fas fa-envelope contact-icon"></i><span>Email: <a href="mailto:ramiro@ramulombardi.com" style="color: var(--primary-light);">ramiro@ramulombardi.com</a></span></div>
+          <div class="contact-item"><i class="fab fa-linkedin-in contact-icon"></i><span>LinkedIn: <a href="https://www.linkedin.com/in/ramulombardi" target="_blank" style="color: var(--primary-light);">/ramulombardi</a></span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made by Ramu<span style="color: var(--primary-light);">🧑🏻‍💻</span></p>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
