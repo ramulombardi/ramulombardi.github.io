@@ -102,14 +102,9 @@
     <div class="contact-info">
       <!-- Botón optimizado para TikTok -->
       <div class="contact-item centered-button">
-        <a 
-          href="#" 
-          class="whatsapp-button"
-          id="whatsappButton"
-          onclick="window.open('https://api.whatsapp.com/send?phone=5491155848680&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web', '_system'); return false;"
-        >
+        <button class="whatsapp-button" id="whatsappBtn">
           <i class="fab fa-whatsapp"></i> Contactame!
-        </a>
+        </button>
       </div>
 
       <!-- Resto de tus contactos -->
@@ -118,6 +113,28 @@
     </div>
   </div>
 </section>
+
+<script>
+document.getElementById('whatsappBtn').addEventListener('click', function() {
+  // Primero intentamos abrir directamente la app
+  window.location.href = 'whatsapp://send?phone=5491155848680&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web';
+  
+  // Si falla (porque no tiene WhatsApp instalado o está en iOS), redirigimos después de un breve delay
+  setTimeout(function() {
+    // Versión alternativa para navegador
+    window.open('https://api.whatsapp.com/send?phone=5491155848680&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web', '_blank');
+    
+    // Tercer intento para TikTok específicamente
+    setTimeout(function() {
+      // Creamos un iframe invisible como último recurso
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = 'https://api.whatsapp.com/send?phone=5491155848680&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web';
+      document.body.appendChild(iframe);
+    }, 200);
+  }, 100);
+});
+</script>
 
     <footer>
       <p>Made by Ramu<span style="color: var(--primary-light);">🧑🏻‍💻</span></p>
