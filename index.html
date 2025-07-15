@@ -98,18 +98,48 @@
     </section>
 
     <section id="contact">
-      <div class="card">
-        <div class="contact-info">
-          <div class="contact-item centered-button">
-            <a href="https://wa.me/5491155848680?text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web" target="_blank" rel="noopener" class="whatsapp-button">
-              <i class="fab fa-whatsapp"></i> Contactame!
-            </a>
-          </div>
-          <div class="contact-item"><i class="fas fa-envelope contact-icon"></i><span>Email: <a href="mailto:ramiro@ramulombardi.com" style="color: var(--primary-light);">ramiro@ramulombardi.com</a></span></div>
-          <div class="contact-item"><i class="fab fa-linkedin-in contact-icon"></i><span>LinkedIn: <a href="https://www.linkedin.com/in/ramulombardi" target="_blank" style="color: var(--primary-light);">/ramulombardi</a></span></div>
-        </div>
+  <div class="card">
+    <div class="contact-info">
+      <!-- Botón de WhatsApp (versión mejorada) -->
+      <div class="contact-item centered-button">
+        <a 
+          href="https://wa.me/5491155848680?text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="whatsapp-button"
+          onclick="handleWhatsAppClick(event)"
+        >
+          <i class="fab fa-whatsapp"></i> Contactame!
+        </a>
+        <p class="fallback-message" style="display: none; margin-top: 8px; color: #ff6b6b;">
+          Si no se abre WhatsApp, copiá este número: <strong>+5491155848680</strong>
+        </p>
       </div>
-    </section>
+
+      <!-- Resto de tus contactos (email, LinkedIn) -->
+      <div class="contact-item"><i class="fas fa-envelope contact-icon"></i><span>Email: <a href="mailto:ramiro@ramulombardi.com" style="color: var(--primary-light);">ramiro@ramulombardi.com</a></span></div>
+      <div class="contact-item"><i class="fab fa-linkedin-in contact-icon"></i><span>LinkedIn: <a href="https://www.linkedin.com/in/ramulombardi" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light);">/ramulombardi</a></span></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Función para manejar fallos en la apertura de WhatsApp (especialmente en TikTok)
+  function handleWhatsAppClick(event) {
+    const fallbackMessage = document.querySelector('.fallback-message');
+    const link = event.currentTarget.href;
+    
+    // Intenta abrir WhatsApp en una nueva pestaña
+    const newWindow = window.open(link, '_blank');
+    
+    // Si el navegador bloquea la apertura (como en TikTok), muestra el mensaje de fallback
+    setTimeout(() => {
+      if (!newWindow || newWindow.closed || newWindow.location.href === 'about:blank') {
+        fallbackMessage.style.display = 'block';
+      }
+    }, 500);
+  }
+</script>
 
     <footer>
       <p>Made by Ramu<span style="color: var(--primary-light);">🧑🏻‍💻</span></p>
