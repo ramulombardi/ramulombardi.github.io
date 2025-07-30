@@ -117,19 +117,19 @@
 <script>
 document.getElementById('whatsappBtn').addEventListener('click', function() {
   // Primero intentamos abrir directamente la app
-  window.location.href = 'whatsapp://send?phone=5491155848680&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web';
+  window.location.href = 'whatsapp://send?phone=5491167016174&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web';
   
   // Si falla (porque no tiene WhatsApp instalado o está en iOS), redirigimos después de un breve delay
   setTimeout(function() {
     // Versión alternativa para navegador
-    window.open('https://api.whatsapp.com/send?phone=5491155848680&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=5491167016174&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web', '_blank');
     
     // Tercer intento para TikTok específicamente
     setTimeout(function() {
       // Creamos un iframe invisible como último recurso
       const iframe = document.createElement('iframe');
       iframe.style.display = 'none';
-      iframe.src = 'https://api.whatsapp.com/send?phone=5491155848680&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web';
+      iframe.src = 'https://api.whatsapp.com/send?phone=5491167016174&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web';
       document.body.appendChild(iframe);
     }, 200);
   }, 100);
