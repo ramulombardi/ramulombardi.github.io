@@ -207,7 +207,12 @@ header h3 {
     color: white;
     border: none;
     box-shadow: var(--shadow-primary);
+    margin-top: 0.01rem;
+    margin-bottom: 1.4rem;
 }
+
+
+
 
 .btn-primary:hover {
     transform: translateY(-4px);
