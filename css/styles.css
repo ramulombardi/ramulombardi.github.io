@@ -1,7 +1,7 @@
 :root {
     /* Paleta de colores */
     --background-dark: #000000;
-    --background-gradient: linear-gradient(135deg, #ffffff 10%, #09173d 25%, #000000 50%);
+    --background-gradient: linear-gradient(135deg, #000000 10%, #09173d 25%, #000000 50%);
     --card-bg-light: #000000;
     --card-bg-gradient: linear-gradient(135deg, #2a2a3e 0%, #1e1e2f 100%);
     
@@ -108,16 +108,17 @@ header::before {
 .profile-pic {
     width: 280px;
     height: 280px;
-    border-radius: 50%;
+    border-radius: 30%;
     object-fit: cover;
-    border: 0.5px solid transparent;
+    border: 0.3px solid transparent;
     background: var(--primary-gradient);
-    padding: 3px;
+    padding: 0px;
     margin-bottom: 1rem;
     box-shadow: var(--shadow-primary);
     transition: all 0.4s ease;
     position: relative;
 }
+
 
 .profile-pic:hover {
     transform: scale(1.1);
