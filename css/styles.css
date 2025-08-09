@@ -1,25 +1,25 @@
 :root {
-    /* Paleta de colores inspirada en DevFit90 */
-    --background-dark: #0a0a0a;
-    --background-gradient: linear-gradient(135deg, #161628 0%, #040b1f 50%, #000000 100%);
-    --card-bg-light: #1a1a2e;
+    /* Paleta de colores */
+    --background-dark: #000000;
+    --background-gradient: linear-gradient(135deg, #ffffff 20%, #09173d 35%, #000000 50%);
+    --card-bg-light: #000000;
     --card-bg-gradient: linear-gradient(135deg, #2a2a3e 0%, #1e1e2f 100%);
     
-    /* Gradientes principales inspirados en DevFit90 */
+    /* Gradientes principales */
     --primary-gradient: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
-    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --secondary-gradient: linear-gradient(135deg, #000000 0%, #000000 100%);
     --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-    --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --warning-gradient: linear-gradient(135deg, #000000 0%, #fee140 100%);
     
     /* Colores de texto */
-    --text-primary: #000000; /* Asegúrate de que esto no afecte a los emojis de imagen si no son transparentes */
+    --text-primary: #000000; 
     --text-secondary: #b0b0b0;
     --text-accent: #00f2fe;
     
     /* Efectos y sombras */
     --shadow-primary: 0 10px 30px rgba(133, 152, 235, 0.3);
-    --shadow-secondary: 0 10px 30px rgba(245, 87, 108, 0.3);
+    --shadow-secondary: 0 10px 30px rgba(0, 0, 0, 0.3);
     --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
     --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.5);
     
@@ -60,7 +60,7 @@ body::before {
     height: 100%;
     background: 
         radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 40% 60%, rgba(0, 242, 254, 0.05) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
@@ -106,8 +106,8 @@ header::before {
 }
 
 .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     border: 0.5px solid transparent;
@@ -318,7 +318,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
