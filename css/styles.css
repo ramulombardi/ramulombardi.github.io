@@ -1,7 +1,7 @@
 :root {
     /* Paleta de colores */
     --background-dark: #000000;
-    --background-gradient: linear-gradient(135deg, #ffffff 20%, #09173d 35%, #000000 50%);
+    --background-gradient: linear-gradient(135deg, #ffffff 10%, #09173d 35%, #000000 50%);
     --card-bg-light: #000000;
     --card-bg-gradient: linear-gradient(135deg, #2a2a3e 0%, #1e1e2f 100%);
     
