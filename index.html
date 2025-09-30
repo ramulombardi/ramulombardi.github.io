@@ -1,175 +1,277 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ramu's Portfolio</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2285%22>🧑🏻‍💻</text></svg>">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Tu CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboards personalizados en Looker Studio y Power BI para transformar tus datos en decisiones de negocio inteligentes.">
+    <title>Ramu's Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑🏻‍💻</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/ramulombardi" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://twitter.com/ramulombardi" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.youtube.com/@ramulombardi" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/ramulombardi_" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@ramulombardi" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
-  </div>
-
-
-
-  <div class="container">
-
-    <header>
-      <div class="intro">
-        <img src="https://github.com/ramulombardi.png" alt="Ramu Lombardi" class="profile-pic">
-      </div>
-      
-      <p class="tagline">
-        <h2 class="hero-title">Hola, soy Ramu <img src="img/laptopman.png" alt="Emoji de hombre con laptop" class="emoji-img"></h2>
-        
-      
-        <h3>Finanzas | Programación | Data | AI<br>Estudiante Contador Público y Lic. en Administración</h3>
-      </p>
-      
-          <div class="youtube-container">
-  <iframe 
-    src="https://www.youtube.com/embed/yEvDReQ_azE" 
-    title="YouTube video player" 
-    frameborder="0"
-    allow="encrypted-media"
-    allowfullscreen>
-</iframe>
-
-</div>
-
-
-    
-
-
+    <header class="header">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ramulombardi" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/ramulombardi" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/@ramulombardi" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/ramulombardi_" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@ramulombardi" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
     </header>
 
-<div class="button-container">
-  <a href="https://drive.google.com/file/d/1UIA21gFGpEtrz8DTsPjwXOoOrpxlIl5W/view?usp=sharing" target="_blank" class="btn btn-primary">
-    <i class="fas fa-file-alt" style="margin-right: 8px;"></i> Ver CV
-  </a>
-</div>
-    
-    <section id="certificaciones">
-      <h2 class="section-title">Certificaciones</h2>
-      <div class="cert-carousel">
-        <div class="cert-track">
-          <img src="img/cert1.jpg" alt="Certificado 1" class="cert-thumb">
-          <img src="img/cert2.jpg" alt="Certificado 2" class="cert-thumb">
-          <img src="img/cert3.jpg" alt="Certificado 3" class="cert-thumb">
-          <img src="img/cert4.jpg" alt="Certificado 4" class="cert-thumb">
-        </div>
-      </div>
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <p class="hero-tagline">Hola, soy <strong>Ramu</strong>🧑🏻‍💻. Este es mi Portfolio.</p>
+                <h1 class="hero-title">Transformo negocios con <span class="highlight">tecnología</span> y finanzas</h1>
+                <p class="hero-subtitle">Dashboards e Implementaciones Tech de alto impacto que te dan el control total para optimizar ventas y estrategias.</p>
+                <a href="#contacto" class="cta-button pulse">Quiero mi dashboard gratis</a>
+                <div class="hero-video-container">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/yEvDReQ_azE" 
+                        title="Video de presentación" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
 
-      <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-      </div>
-    </section>
+        <!-- <section id="beneficios" class="content-section">
+            <div class="container">
+                <h2>Beneficios que <span class="highlight">Impulsan</span> tu Negocio</h2>
+                <div class="card-grid">
+                    <div class="card fade-in">
+                        <h3>Control Total</h3>
+                        <p>Visión 360° en tiempo real de tus KPIs más críticos.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <h3>Decisiones Estratégicas</h3>
+                        <p>Elimina las suposiciones con insights basados en datos sólidos.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <h3>Eficiencia Operativa</h3>
+                        <p>Automatiza reportes, ahorra tiempo y enfócate en crecer.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <h3>Visualización Intuitiva</h3>
+                        <p>Comprende datos complejos de un vistazo, sin esfuerzo.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <section id="soluciones" class="content-section bg-darker">
+            <div class="container">
+                <h2>Problemas que <span class="highlight">Resolvemos</span></h2>
+                <div class="solution-grid">
+                    <div class="solution-item slide-in">
+                        <h3>Datos Desordenados</h3>
+                        <p>Centralizamos y estructuramos tu información dispersa en un solo lugar coherente.</p>
+                    </div>
+                    <div class="solution-item slide-in">
+                        <h3>Falta de Claridad</h3>
+                        <p>Transformamos números crudos en visualizaciones claras y accionables para tu negocio.</p>
+                    </div>
+                    <div class="solution-item slide-in">
+                        <h3>Pérdida de Tiempo</h3>
+                        <p>Dile adiós a las horas en hojas de cálculo. Tus reportes, automatizados y siempre listos.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="casos" class="content-section">
+            <div class="container">
+                <h2>Casos de Uso <span class="highlight">Estratégicos</span></h2>
+                <div class="case-grid">
+                    <div class="case-card fade-in">
+                        <h3>Negocios Generales</h3>
+                        <p>Desde PYMES hasta grandes empresas, optimiza:</p>
+                        <ul>
+                            <li>Análisis de Ventas y Rentabilidad</li>
+                            <li>Control Financiero y Presupuestos</li>
+                            <li>Gestión Operativa y Rendimiento</li>
+                        </ul>
+                    </div>
+                    <div class="case-card fade-in">
+                        <h3>E-commerce</h3>
+                        <p>Potencia tu tienda online con datos para:</p>
+                        <ul>
+                            <li>Rendimiento de Marketing Digital (ROAS, CPA)</li>
+                            <li>Gestión de Inventario y Logística</li>
+                            <li>Análisis de Clientes y Tasa de Conversión</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="acerca" class="content-section bg-darker">
+            <div class="container">
+                <h2><span class="highlight">Ramiro Nahuel Lombardi:</span> Sobre mí</h2>
+                <div class="about-me fade-in">
+                    <div class="about-me-image">
+                        <img src="https://github.com/ramulombardi.png" alt="Ramiro Lombardi">
+                    </div>
+                    <div class="about-me-text">
+                        <p>Soy Ramu, y me encantan <strong>las finanzas, y el mundo tech</strong>. Me encuentro estudiando Cs. Económicas y trabajando como Analista de Datos Freelance, implementando soluciones tech en diferentes proyectos.</p>
+                        <div class="cv-button-container">
+                            <a href="https://drive.google.com/file/d/1UIA21gFGpEtrz8DTsPjwXOoOrpxlIl5W/view?usp=sharing" target="_blank" class="cv-button">
+                                <i class="fas fa-file-pdf"></i>
+                                Ver CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-    <section id="projects">
-      <h2 class="section-title">Proyectos</h2>
-
-      <div class="card centered">
-        <h3>Dashboards en Power BI y Looker Studio</h3>
-        <p>Variedad de Dashboards visualmente claros para el análisis de resultados comerciales.</p>
-        <div class="tech-stack">
-          <span class="tech-item">Power BI</span>
-          <span class="tech-item">Excel</span>
-          <span class="tech-item">Data Visualization</span>
-        </div>
-      <a href="dashboards.html" class="project-link">Ver dashboards</a>
-      </div>
-
-      <div class="card centered">
-        <h3>Index Fund Simulator</h3>
-        <p>Aplicación web integrada con Yahoo Finance API para simular el impacto del interés compuesto cuando invertimos en fondos indexados.</p>
-        <div class="tech-stack">
-          <span class="tech-item">Python</span>
-          <span class="tech-item">Streamlit</span>
-          <span class="tech-item">Yahoo Finance API</span>
-        </div>
-        <a href="https://indexfundsimulator.streamlit.app/" target="_blank" class="project-link">Ver proyecto</a>
-      </div>
-
-      <div class="card centered">
-        <h3>Dolar API Integration</h3>
-        <p>Aplicación web integrada con Dolar API para calcular los montos de compra y venta de dolares en Argentina.</p>
-        <div class="tech-stack">
-          <span class="tech-item">Python</span>
-          <span class="tech-item">Streamlit</span>
-          <span class="tech-item">Dolar API</span>
-        </div>
-        <a href="https://dolarcalculator.streamlit.app/" target="_blank" class="project-link">Ver proyecto</a>
-      </div>
-    </section>
-
-
-
-      <section id="contact">
-  <div class="card">
-    <div class="contact-info">
-      <!-- Botón optimizado para TikTok -->
-      <div class="contact-item centered-button">
-        <button class="whatsapp-button" id="whatsappBtn">
-          <i class="fab fa-whatsapp"></i> Contactame!
-        </button>
-      </div>
-
+        <section id="certificaciones">
+            <h2 class="section-title">Certificaciones</h2>
+            <div class="cert-carousel">
+              <div class="cert-track">
+                <img src="img/cert1.jpg" alt="Certificado 1" class="cert-thumb">
+                <img src="img/cert2.jpg" alt="Certificado 2" class="cert-thumb">
+                <img src="img/cert3.jpg" alt="Certificado 3" class="cert-thumb">
+                <img src="img/cert4.jpg" alt="Certificado 4" class="cert-thumb">
+              </div>
+            </div>
       
-      <div class="contact-item"><i class="fas fa-envelope contact-icon"></i><span>Email: <a href="mailto:info@ramulombardi.com" style="color: var(--primary-light);">info@ramulombardi.com</a></span></div>
-      <div class="contact-item"><i class="fab fa-linkedin-in contact-icon"></i><span>LinkedIn: <a href="https://www.linkedin.com/in/ramulombardi" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light);">/ramulombardi</a></span></div>
-    </div>
-  </div>
-    
-</section>
+            <div id="modal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="modal-img">
+            </div>
+          </section>
 
-<script>
-document.getElementById('whatsappBtn').addEventListener('click', function() {
-  // Primero intentamos abrir directamente la app
-  window.location.href = 'whatsapp://send?phone=5491150637803&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web';
-  
-  // Si falla (porque no tiene WhatsApp instalado o está en iOS), redirigimos después de un breve delay
-  setTimeout(function() {
-    // Versión alternativa para navegador
-    window.open('https://api.whatsapp.com/send?phone=5491150637803&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web', '_blank');
-    
-    // Tercer intento para TikTok específicamente
-    setTimeout(function() {
-      // Creamos un iframe invisible como último recurso
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = 'https://api.whatsapp.com/send?phone=5491150637803&text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web';
-      document.body.appendChild(iframe);
-    }, 200);
-  }, 100);
-});
-</script>
 
-    <footer>
-      <p>Made by Ramu<span style="color: var(--primary-light);">🧑🏻‍💻</span></p>
+          <section id="projects">
+            <h2 class="section-title">Proyectos</h2>
+      
+            <div class="card centered">
+              <h3>Dashboards en Power BI y Looker Studio</h3>
+              <p>Variedad de Dashboards visualmente claros para el análisis de resultados comerciales.</p>
+              <div class="tech-stack">
+                <span class="tech-item">Power BI</span>
+                <span class="tech-item">Excel</span>
+                <span class="tech-item">Data Visualization</span>
+              </div>
+            <a href="dashboards.html" class="project-link">Ver dashboards</a>
+            </div>
+      
+            <div class="card centered">
+              <h3>Index Fund Simulator</h3>
+              <p>Aplicación web integrada con Yahoo Finance API para simular el impacto del interés compuesto cuando invertimos en fondos indexados.</p>
+              <div class="tech-stack">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Streamlit</span>
+                <span class="tech-item">Yahoo Finance API</span>
+              </div>
+              <a href="https://indexfundsimulator.streamlit.app/" target="_blank" class="project-link">Ver proyecto</a>
+            </div>
+      
+            <div class="card centered">
+              <h3>Dolar API Integration</h3>
+              <p>Aplicación web integrada con Dolar API para calcular los montos de compra y venta de dolares en Argentina.</p>
+              <div class="tech-stack">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Streamlit</span>
+                <span class="tech-item">Dolar API</span>
+              </div>
+              <a href="https://dolarcalculator.streamlit.app/" target="_blank" class="project-link">Ver proyecto</a>
+            </div>
+          </section>
+
+        <!-- <section class="content-section testimonials-section">
+            <div class="container">
+                <h2>Lo que dicen mis <span class="highlight">Clientes</span></h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card fade-in">
+                        <p class="testimonial-text">"La visión que Ramiro nos dio con los dashboards fue revolucionaria. Pasamos de operar a ciegas a tomar decisiones con confianza, lo que disparó nuestras ventas."</p>
+                        <p class="testimonial-author">— Ana G., Directora de Marketing</p>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <p class="testimonial-text">"Finalmente tenemos una visión clara de nuestras finanzas. Los reportes automáticos nos ahorran horas y nos dan una perspectiva invaluable cada día."</p>
+                        <p class="testimonial-author">— Carlos R., CEO de E-commerce</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="contacto" class="content-section bg-darker final-cta">
+            <div class="container">
+                <h2>¿Listo para <span class="highlight">Transformar</span> tus Datos?</h2>
+                <p class="cta-description">No dejes tus decisiones al azar. Una implemetación personalizada es la clave para un crecimiento sostenible y estratégico.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>+54 9 11 5063-7803</p>
+                            <a href="https://wa.me/5491150637803?text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Web
+                            " target="_blank" class="contact-link">
+                                <i class="fab fa-whatsapp"></i>
+                                Enviar mensaje
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@ramulombardi.com</p>
+                            <a href="mailto:info@ramulombardi.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                Enviar email
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>/ramulombardi</p>
+                            <a href="https://www.linkedin.com/in/ramulombardi" target="_blank" class="contact-link">
+                                <i class="fab fa-linkedin-in"></i>
+                                Ver perfil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos de Servicio</a>
+            </div>
+            <p>&copy; 2025 Ramiro Lombardi. Todos los derechos reservados. <span class="footer-highlight">Data Driven Solutions.</span></p>
+        </div>
     </footer>
 
-  </div>
-
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
