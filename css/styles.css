@@ -718,19 +718,19 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(45deg, var(--color-accent-blue), var(--color-accent-green));
+    background: linear-gradient(45deg, #25d366, #128c7e);
     color: var(--color-text-primary);
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
 .contact-link:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.5);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
     color: var(--color-text-primary);
 }
 
