@@ -154,9 +154,10 @@
 
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1px));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
             margin: 40px 0;
+            justify-items: center; /* center cards within their grid cells */
         }
 
         .tech-card {
@@ -278,6 +279,14 @@
 
         /* Mobile responsive */
         @media (max-width: 768px) {
+            .tech-grid {
+                grid-template-columns: 1fr; /* single column on small screens */
+                justify-items: stretch; /* make cards take full width */
+            }
+
+            .tech-card {
+                width: 100%;
+            }
             .portfolio-container {
                 padding: 10px;
             }
