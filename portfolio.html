@@ -5,6 +5,330 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Proyectos - RAMU</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Portfolio specific styles */
+        .portfolio-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .portfolio-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: 8px;
+            text-shadow: 0 2px 10px var(--glow);
+            transition: color 0.4s ease, text-shadow 0.4s ease;
+        }
+
+        .portfolio-header p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            text-transform: none;
+            font-weight: 500;
+            transition: color 0.4s ease;
+            margin-bottom: 32px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: center;
+            margin: 80px 0 40px 0;
+            letter-spacing: 2px;
+        }
+
+        .project-section {
+            margin: 60px 0;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 40px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .project-section:hover {
+            background: var(--card-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px var(--shadow), 0 0 40px var(--glow);
+        }
+
+        .project-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .project-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .project-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .project-content {
+            flex: 1;
+            padding: 20px 0;
+        }
+
+        .project-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .project-content p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: var(--accent);
+            color: var(--bg-primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .project-link {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--card-hover);
+            transform: translateY(-2px);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1px));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .tech-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            background: var(--card-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px var(--shadow);
+        }
+
+        .tech-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .tech-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .education-item, .certification-item {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover, .certification-item:hover {
+            background: var(--card-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px var(--shadow);
+        }
+
+        .education-item h4, .certification-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .education-item p, .certification-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-link:hover {
+            background: var(--card-hover);
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px var(--shadow);
+        }
+
+        .back-link svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            background: var(--accent);
+            color: var(--bg-primary);
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px var(--shadow);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .portfolio-container {
+                padding: 10px;
+            }
+
+            .portfolio-header h1 {
+                font-size: 36px;
+                letter-spacing: 4px;
+            }
+
+            .project-section {
+                flex-direction: column;
+                gap: 30px;
+                padding: 20px;
+            }
+
+            .project-section.reverse {
+                flex-direction: column;
+            }
+
+            .project-image {
+                min-width: auto;
+            }
+
+            .section-title {
+                font-size: 24px;
+                margin: 40px 0 20px 0;
+            }
+
+            .back-link {
+                top: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .back-link svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .cta-button {
+                padding: 14px 24px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -24,29 +348,163 @@
         </svg>
     </button>
 
-    <div class="container">
-        <div class="header">
+    <a href="index.html" class="back-link" aria-label="Volver al inicio">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+    </a>
+
+    <div class="portfolio-container">
+        <div class="portfolio-header">
             <h1>Portfolio</h1>
             <p>Proyectos, Tecnologías, Estudios y Certificaciones</p>
-            <div class="social-icons">
-                <a href="https://wa.me/5491150637803?text=Hola%20Ramiro!%20Me%20contacto%20desde%20tu%20Portfolio" class="social-icon" target="_blank" aria-label="WhatsApp">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                    </svg>
+            <div class="cta-buttons">
+                <a href="https://www.linkedin.com/in/ramulombardi/" class="cta-button" target="_blank">
+                    Contactar por LinkedIn
                 </a>
-                <a href="https://www.linkedin.com/in/ramulombardi/" class="social-icon" target="_blank" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
+                <a href="https://drive.google.com/file/d/1UIA21gFGpEtrz8DTsPjwXOoOrpxlIl5W/view?usp=sharing" class="cta-button" target="_blank">
+                    Ver CV
                 </a>
             </div>
         </div>
 
-        <div class="links">
-            <a href="#proyectos" class="link-button"><span>Proyectos Destacados</span></a>
-            <a href="#tecnologias" class="link-button"><span>Tecnologías</span></a>
-            <a href="#estudios" class="link-button"><span>Estudios</span></a>
-            <a href="#certificaciones" class="link-button"><span>Certificaciones</span></a>
+        <h2 class="section-title" id="proyectos">Proyectos Destacados</h2>
+
+        <div class="project-section">
+            <div class="project-image">
+                <img src="https://via.placeholder.com/600x400/E8DCC8/1a1a1a?text=Dashboard+Financiero" alt="Dashboard Financiero Portfolio">
+            </div>
+            <div class="project-content">
+                <h3>Dashboard Financiero Portfolio</h3>
+                <p>Dashboard interactivo que integra APIs y Web Scraping para obtener cotizaciones bursátiles, de divisas y criptomonedas en tiempo real. Incluye análisis de portfolio personal con métricas de rendimiento y riesgo.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Power Query</span>
+                    <span class="tech-tag">Web Scraping</span>
+                    <span class="tech-tag">APIs</span>
+                    <span class="tech-tag">DAX</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiZjQzZmU3N2EtNzRlMy00N2MzLWIxMzMtMjI3NTZjOTdjNmRkIiwidCI6ImM1Y2I4YTU0LWYxZGEtNDNkOC05MmJiLTFiYjFiMTliMDVjNyIsImMiOjR9" class="project-link" target="_blank">Ver Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section reverse">
+            <div class="project-image">
+                <img src="https://via.placeholder.com/600x400/E8DCC8/1a1a1a?text=Crypto+Dashboard" alt="Crypto Dashboard">
+            </div>
+            <div class="project-content">
+                <h3>Crypto Dashboard con CoinGecko API</h3>
+                <p>Dashboard especializado en criptomonedas que consume datos en tiempo real de CoinGecko API. Incluye análisis de tendencias, volatilidad y comparativas entre diferentes criptomonedas.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Power Query</span>
+                    <span class="tech-tag">CoinGecko API</span>
+                    <span class="tech-tag">JSON</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiOGFhZDFlMjUtZjljNS00N2U0LThlNzctYTljMWMyZmMyMzE0IiwidCI6ImM1Y2I4YTU0LWYxZGEtNDNkOC05MmJiLTFiYjFiMTliMDVjNyIsImMiOjR9" class="project-link" target="_blank">Ver Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <div class="project-image">
+                <img src="https://via.placeholder.com/600x400/E8DCC8/1a1a1a?text=Finanzas+Personales" alt="Dashboard Finanzas Personales">
+            </div>
+            <div class="project-content">
+                <h3>Dashboard Finanzas Personales</h3>
+                <p>Sistema completo de gestión financiera personal con análisis de gastos segmentados por categoría, subcategoría, métodos de pago y tendencias temporales. Incluye proyecciones y alertas.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Looker Studio</span>
+                    <span class="tech-tag">Google Sheets</span>
+                    <span class="tech-tag">Google Cloud</span>
+                    <span class="tech-tag">SQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://lookerstudio.google.com/embed/reporting/5f15ae7c-0c07-4823-9794-ebdc7c475eb5/page/tS0QF" class="project-link" target="_blank">Ver Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section reverse">
+            <div class="project-image">
+                <img src="https://via.placeholder.com/600x400/E8DCC8/1a1a1a?text=Ventas+Comida+Rapida" alt="Dashboard Ventas Comida Rápida">
+            </div>
+            <div class="project-content">
+                <h3>Dashboard Ventas Local Comida Rápida</h3>
+                <p>Dashboard comercial para análisis de ventas de restaurante de comida rápida. Incluye análisis por producto, cliente, métodos de pago, horarios pico y análisis de rentabilidad por categoría.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Looker Studio</span>
+                    <span class="tech-tag">Google Analytics</span>
+                    <span class="tech-tag">E-commerce</span>
+                    <span class="tech-tag">KPIs</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://lookerstudio.google.com/embed/reporting/84ced582-1b33-4422-90be-7336b0b7fe6a/page/kx1QF" class="project-link" target="_blank">Ver Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="tecnologias">Tecnologías</h2>
+
+        <div class="tech-grid">
+            <div class="tech-card">
+                <h4>Power BI</h4>
+                <p>Desarrollo de dashboards interactivos, modelado de datos con DAX, integración de APIs y automatización de reportes.</p>
+            </div>
+            <div class="tech-card">
+                <h4>Looker Studio</h4>
+                <p>Creación de visualizaciones avanzadas, integración con Google Cloud Platform y análisis de datos en tiempo real.</p>
+            </div>
+            <div class="tech-card">
+                <h4>Power Query</h4>
+                <p>Transformación y limpieza de datos, conexiones a múltiples fuentes y automatización de procesos ETL.</p>
+            </div>
+            <div class="tech-card">
+                <h4>APIs & Web Scraping</h4>
+                <p>Integración de APIs REST, web scraping con Python, automatización de extracción de datos financieros.</p>
+            </div>
+            <div class="tech-card">
+                <h4>SQL</h4>
+                <p>Consultas complejas, optimización de bases de datos, análisis de rendimiento y diseño de esquemas.</p>
+            </div>
+            <div class="tech-card">
+                <h4>Excel Avanzado</h4>
+                <p>Macros VBA, fórmulas avanzadas, análisis de datos y automatización de procesos empresariales.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="estudios">Estudios</h2>
+
+        <div class="education-item">
+            <h4>Ingeniería en Sistemas de Información</h4>
+            <p>Universidad Tecnológica Nacional - Facultad Regional Buenos Aires<br>
+            Especialización en análisis de datos, sistemas de información empresarial y desarrollo de software.</p>
+        </div>
+
+        <div class="education-item">
+            <h4>Certificación en Business Intelligence</h4>
+            <p>Microsoft Power BI Specialist<br>
+            Especialización en herramientas de Microsoft para análisis de datos y business intelligence.</p>
+        </div>
+
+        <h2 class="section-title" id="certificaciones">Certificaciones</h2>
+
+        <div class="certification-item">
+            <h4>Microsoft Certified: Power BI Data Analyst Associate</h4>
+            <p>Certificación oficial de Microsoft en análisis de datos con Power BI, incluyendo modelado, visualización y análisis avanzado.</p>
+        </div>
+
+        <div class="certification-item">
+            <h4>Google Analytics Certified</h4>
+            <p>Certificación en Google Analytics para análisis web, tracking de conversiones y optimización de sitios web.</p>
+        </div>
+
+        <div class="certification-item">
+            <h4>Looker Studio Specialist</h4>
+            <p>Especialización en Google Looker Studio para creación de dashboards y reportes interactivos.</p>
         </div>
 
         <div class="footer">
