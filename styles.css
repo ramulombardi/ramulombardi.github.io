@@ -217,7 +217,8 @@ body::before {
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin-top: 24px;
+    margin-top: -10px;
+    margin-bottom: -25px;
 }
 
 .social-icon {
