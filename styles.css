@@ -297,7 +297,6 @@ body::before {
     letter-spacing: 1px;
     border-radius: 12px;
     animation: fadeInUp 0.8s ease backwards;
-    font-family: 'Playfair Display', serif;
 }
 
 @keyframes fadeInUp {
