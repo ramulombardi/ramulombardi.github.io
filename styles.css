@@ -9,9 +9,9 @@
 :root {
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
-    --text-primary: #fcf4e6;
+    --text-primary: #fffbf5;
     --text-secondary: #a0a0a0;
-    --accent: #E8DCC8;
+    --accent: #eee5d5;
     --accent-secondary: #d4c5ad;
     --border: rgba(232, 220, 200, 0.2);
     --card-bg: rgba(232, 220, 200, 0.05);
@@ -23,13 +23,13 @@
 
 [data-theme="light"] {
     --bg-primary: #ffffff;
-    --bg-secondary: #ffe6c5;
+    --bg-secondary: #ffefda;
     --text-primary: #12184f;
     --text-secondary: #39476f;
     --accent: #1a1a1a;
     --accent-secondary: #2d2d2d;
     --border: rgba(26, 26, 26, 0.15);
-    --card-bg: #fff8ee;
+    --card-bg: #fff7ed;
     --card-hover: #fff4e7;
     --shadow: rgba(0, 0, 0, 0.1);
     --glow: rgba(232, 220, 200, 0.3);
